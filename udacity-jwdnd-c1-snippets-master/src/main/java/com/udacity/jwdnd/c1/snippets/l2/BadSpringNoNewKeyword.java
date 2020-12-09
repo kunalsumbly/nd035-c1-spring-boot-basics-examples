@@ -1,5 +1,6 @@
 package com.udacity.jwdnd.c1.snippets.l2;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -7,6 +8,9 @@ import java.util.List;
 
 @Service
 public class BadSpringNoNewKeyword {
+	
+	@Autowired
+	private UserService temp;
 
     public List<UserProfile> doThings() {
 

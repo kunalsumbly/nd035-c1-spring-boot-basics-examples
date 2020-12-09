@@ -8,6 +8,19 @@
     <title>Home</title>
 </head>
 <body>
-<h1>Hello, homepage!</h1>
+<!-- h1 th:text="${welcomeMessage}">Hello, homepage!</h1-->
+<!-- <h1 th:each="msg: ${greetings}" th:text="${msg}">Hello, homepage!</h1> -->
+<!-- <h1 th:if="${msg.contains('goodbye')}" th:text="${msg}">Hello, homepage!</h1> -->
+
+<!-- <p th:text="${cat.name+' is ' + cat.color}"></p>
+<p th:if="${cat.maxSpeed > 10}">Pretty Fast</p> -->
+
+<form action="#" th:action="@{/simplehome/}" method="post">
+       <input type="submit" name="firstVisit" value="Visit me">
+       <h1 th:if="${firstVisit}">Hello, homepage!</h1>
+   		<h1 th:unless="${firstVisit}">Welcome back!</h1>
+   </form>
+   
+
 </body>
 </html>
